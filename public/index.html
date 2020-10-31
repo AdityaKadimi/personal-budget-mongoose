@@ -176,8 +176,7 @@
 
 
         function getBudget() {
-        axios.get("http://localhost:3000/api/budget").then(function (res) {
-            console.log(res.data); 
+        axios.get("http://localhost:3000/budget").then(function (res) { 
           for (var i = 0; i < res.data.length; i++) {
             data.datasets[0].data[i] = res.data[i].budget;
             data.labels[i] = res.data[i].title;
@@ -198,7 +197,7 @@
     var color;
 
     function getBudget() {
-      axios.get("http://localhost:3000/api/budget").then(function (res) {
+      axios.get("http://localhost:3000/budget").then(function (res) {
         for (var i = 0; i < res.data.length; i++) {
           values[i]=res.data[i].budget;
           labels[i]=res.data[i].title;
