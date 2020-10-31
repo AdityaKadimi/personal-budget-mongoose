@@ -18,18 +18,10 @@ app.use('',express.static('public'));
 mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology:true})
         .then(()=>{
             app.use(express.json())
-            // app.use("/api",routes)
         })
         .catch((connectionError)=>{
           console.log(connectionError)
         })
-		
-
-
-
-// app.get('/budget',(req,res) => {
-//     res.json(loadData);
-// });
 
 app.get('/budget',(req,res)=>{
     mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true})
